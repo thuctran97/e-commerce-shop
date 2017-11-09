@@ -44,7 +44,7 @@
 
         <footer class="panel panel-default row">
 	        <div class="panel-heading">
-	        	<p class="text-center">Nhất Nghệ &copy; 2017. All rights reserved.</p>
+	        	<p class="text-center">Designed by Thuc</p>
 	        </div>
         </footer>
     </div>

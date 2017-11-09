@@ -140,4 +140,14 @@ public class ProductService {
 		List<Product> list = query.list();
 		return list;
 	}
+	public List<Product> loadpage(int pageNo, int pageSize) {
+		String hql = "FROM Product";
+		Session session = factory.getCurrentSession();
+		Query query = session.createQuery(hql);
+		query.setFirstResult(pageNo*pageSize);    
+		//dòng dữ liệu đầu =0 -> page 1: 0-> 5, page 2: 6->11,...first=0,6,...max=6
+		query.setMaxResults(pageSize);
+		List<Product> list = query.list();
+		return list;
+	}
 }

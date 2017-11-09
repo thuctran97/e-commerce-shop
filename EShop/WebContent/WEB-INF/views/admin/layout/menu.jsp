@@ -14,15 +14,15 @@
 				data-toggle="dropdown">Quản lý <span class="caret"></span>
 			</a>
 				<ul class="dropdown-menu">
-					<li><a href="">Hàng hóa</a>
+					<li><a href="admin/product/index.php">Hàng hóa</a>
 					</li>
-					<li><a href="">Nhà cung cấp</a>
+					<li><a href="admin/supplier/index.php">Nhà cung cấp</a>
 					</li>
-					<li><a href="">Chủng loại</a>
+					<li><a href="admin/category/index.php">Chủng loại</a>
 					</li>
-					<li><a href="">Khách hàng</a>
+					<li><a href="admin/customer/index.php">Khách hàng</a>
 					</li>
-					<li><a href="">Hóa đơn</a>
+					<li><a href="admin/order/index.php">Hóa đơn</a>
 					</li>
 				</ul></li>
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
