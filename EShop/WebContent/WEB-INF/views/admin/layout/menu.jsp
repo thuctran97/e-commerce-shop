@@ -56,14 +56,20 @@
 					khoản <span class="caret"></span>
 			</a>
 				<ul class="dropdown-menu">
-					<li><a href="">Đăng xuất</a>
+					<li><a href="admin/home/login.php?out=true">Đăng xuất</a>
 					</li>
 					<li><a href="">Đổi mật khẩu</a>
 					</li>
 					<li class="divider"></li>
-					<li><a href="">Quản lý tài khoản</a>
+					<li><a href="admin/master/index.php">Quản lý tài khoản</a>
 					</li>
-					<li><a href="">Phân quyền</a>
+					<li><a href="admin/role/index.php">Quản lý vai trò</a>
+					</li>
+					<li><a href="admin/webactionrole/index.php">Quản lý chức năng</a>
+					</li>
+					<li><a href="admin/masterrole/index.php">Phân vai trò</a>
+					</li>
+					<li><a href="admin/actionrole/index.php">Phân quyền</a>
 					</li>
 				</ul></li>
 		</ul>

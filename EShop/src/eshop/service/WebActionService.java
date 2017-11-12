@@ -84,4 +84,14 @@ public class WebActionService {
 		List<WebAction> list = query.list();
 		return list;
 	}
+
+	public boolean exist(String actionname) {
+		String hql = "SELECT COUNT(w) FROM WebAction w WHERE w.name=:aname";
+		Session session = factory.getCurrentSession();
+		Query query = session.createQuery(hql);
+		query.setParameter("aname", actionname);
+		long count = (Long) query.uniqueResult();
+		return count > 0; //>0-> =1 ton tai -> true 
+	}
+	
 }

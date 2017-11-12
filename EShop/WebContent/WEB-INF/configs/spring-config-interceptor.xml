@@ -28,7 +28,12 @@
 <!-- 			AuthenticateInterceptor 			-->
 			<bean class="eshop.interceptor.AuthenticateInterceptor" />
 		</mvc:interceptor>
-		 
+		
+		 <mvc:interceptor>
+			<mvc:mapping path="/admin/**"/>
+			<mvc:exclude-mapping path="/admin/home/**"/>
+			<bean class="eshop.interceptor.AdminInterceptor" />
+		</mvc:interceptor>
 	</mvc:interceptors>
 
 </beans>

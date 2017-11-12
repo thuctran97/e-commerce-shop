@@ -84,4 +84,35 @@ public class MasterRoleService {
 		List<MasterRole> list = query.list();
 		return list;
 	}
+
+	public List<String> getRoleIds(String masterId) {
+		String hql = "SELECT role.id FROM MasterRole " +
+				" WHERE master.id=:mid";
+		// trả về id của những role có masterId = master.id
+		//xem entity MasterRole: có Master master (thay cho masterId) và Role role (roleId)-> để lấy được id của master -> masterId
+		//tương tự với role.id
+		Session session = factory.getCurrentSession();
+		Query query = session.createQuery(hql); 
+		query.setParameter("mid", masterId); //thay biến mid trong hql = masterId đưa vào
+		List<String> list = query.list();
+		return list;
+	}
+
+	public void insertOrDelete(MasterRole masterRole) {
+		Session session = factory.getCurrentSession();
+		try {
+			String hql = "FROM MasterRole " +
+					" WHERE master.id=:mid AND role.id=:rid";
+			Query query = session.createQuery(hql);
+			query.setParameter("mid", masterRole.getMaster().getId());
+			query.setParameter("rid", masterRole.getRole().getId());
+			MasterRole mr = (MasterRole) query.uniqueResult();	
+			// thực hiện thành công -> có master.id và role.id trùng với masterRole nhập vào -> đã co trong database -> xóa
+			session.delete(mr);
+		} 
+		catch (Exception e) {
+			// ko thành công -> ko có trong database -> thêm
+			session.save(masterRole);
+		}
+	}
 }

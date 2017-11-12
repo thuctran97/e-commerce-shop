@@ -1,8 +1,13 @@
 eclipse.preferences.version=1
 encoding//src/eshop/admin/controller/AdminCategoryController.java=UTF-8
+encoding//src/eshop/admin/controller/AdminController.java=UTF-8
+encoding//src/eshop/admin/controller/AdminMasterRoleController.java=UTF-8
 encoding//src/eshop/admin/controller/AdminOrderController.java=UTF-8
 encoding//src/eshop/admin/controller/AdminProductController.java=UTF-8
 encoding//src/eshop/admin/controller/AdminSupplierController.java=UTF-8
 encoding//src/eshop/controller/AccountController.java=UTF-8
 encoding//src/eshop/controller/OrderController.java=UTF-8
+encoding//src/eshop/interceptor/AdminInterceptor.java=UTF-8
+encoding//src/eshop/service/ActionRoleService.java=UTF-8
+encoding//src/eshop/service/MasterRoleService.java=UTF-8
 encoding//src/eshop/service/ProductService.java=UTF-8

@@ -51,5 +51,7 @@ public class WebAction {
 	public void setActionRoles(Collection<ActionRole> actionRoles) {
 		this.actionRoles = actionRoles;
 	}
+
+	
 	
 }
