@@ -7,6 +7,10 @@
 	<title>Lap trinh Java</title>
 	<link href="css/product.css" rel="stylesheet">
 	<script src="js/shopping-cart.js"></script>
+	<style id="nn-cart-fly">
+	
+	
+	</style>
 </head>
 <body>
 	<h2>LIST O PRODUCTS</h2>

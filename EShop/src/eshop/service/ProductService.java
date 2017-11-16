@@ -150,4 +150,14 @@ public class ProductService {
 		List<Product> list = query.list();
 		return list;
 	}
+
+	public List<Object[]> inventoryByCategory() {
+		String hql = "SELECT p.category.nameVN, SUM(p.unitPrice*p.quantity),SUM(p.quantity),"+
+				" MIN(p.unitPrice), MAX(p.unitPrice), AVG(p.unitPrice)"+
+				"FROM Product p GROUP BY p.category.nameVN";
+		Session session = factory.getCurrentSession();
+		Query query = session.createQuery(hql);
+		List<Object[]> list = query.list();
+		return list;
+	}
 }

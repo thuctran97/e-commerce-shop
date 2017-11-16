@@ -104,4 +104,14 @@ public class SupplierService {
 		return sup5;
 		
 	}
+
+	public List<Object[]> inventoryBySupplier() {
+		String hql = "SELECT p.supplier.name, SUM(p.unitPrice*p.quantity),SUM(p.quantity),"+
+				" MIN(p.unitPrice), MAX(p.unitPrice), AVG(p.unitPrice)"+
+				"FROM Product p GROUP BY p.supplier.name";
+		Session session = factory.getCurrentSession();
+		Query query = session.createQuery(hql);
+		List<Object[]> list = query.list();
+		return list;
+	}
 }

@@ -29,25 +29,25 @@
 				data-toggle="dropdown">Thống kê <span class="caret"></span>
 			</a>
 				<ul class="dropdown-menu">
-					<li><a href="">Theo loại</a>
+					<li><a href="admin/inventory/bycategory.php">Theo loại</a>
 					</li>
-					<li><a href="">Theo hãng</a>
-					</li>
-					<li class="divider"></li>
-					<li><a href="">Theo từng mặt hàng</a>
-					</li>
-					<li><a href="">Theo từng loại hàng</a>
-					</li>
-					<li><a href="">Theo từng hãng</a>
-					</li>
-					<li><a href="">Theo từng khách hàng</a>
+					<li><a href="admin/inventory/bysupplier.php">Theo hãng</a>
 					</li>
 					<li class="divider"></li>
-					<li><a href="">Theo từng năm</a>
+					<li><a href="admin/revenue/byproduct.php">Theo từng mặt hàng</a>
 					</li>
-					<li><a href="">Theo từng quí</a>
+					<li><a href="admin/revenue/bycategory.php">Theo từng loại hàng</a>
 					</li>
-					<li><a href="">Theo từng tháng</a>
+					<li><a href="admin/revenue/bysupplier.php">Theo từng hãng</a>
+					</li>
+					<li><a href="admin/revenue/bycustomer.php">Theo từng khách hàng</a>
+					</li>
+					<li class="divider"></li>
+					<li><a href="admin/revenue/byyear.php">Theo từng năm</a>
+					</li>
+					<li><a href="admin/revenue/byquarter.php">Theo từng quí</a>
+					</li>
+					<li><a href="admin/revenue/bymonth.php">Theo từng tháng</a>
 					</li>
 				</ul></li>
 		</ul>

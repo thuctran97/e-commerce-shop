@@ -1,10 +1,10 @@
-$(function(){
+﻿$(function(){
 	/*
 	 * Bo vao gio hang 
 	 */
 	$("button[data-cart-add]").click(function(){
 		var id = $(this).attr("data-cart-add");
-//		giá trị id sp đang bấm
+//		giá trị id của sp đang bấm
 		$.ajax({
 			url:"shopping-cart/add.php",
 			data:{id: id}, 
@@ -16,7 +16,20 @@ $(function(){
 			},
 			dataType:"json"
 		});
-	});
+//		$(this).parents(".panel").find(".panel-body img").affect("bounce");
+		//var css= '.nn-cart-fly{background-color:url('+src+'); background-size: 100% 100%;}';
+		//sai chỗ đóng ngoặc '+src+' 
+			
+		var img = $(this).parents(".panel").find(".panel-body img"); //tìm địa chỉ image
+		var src = img.attr("src");
+		var css = '.nn-cart-fly{background-image: url("'+src+'");background-size: 100% 100%;}';
+		$("#nn-cart-fly").html(css); //user/product/list.jsp, trong style có id=cc-cart-fly
+		img.effect("transfer", {to:".nn-cart-img", className:"nn-cart-fly"}, 1000);//hiệu ứng bay
+		//nn-cart-img trong user/layout/cart-info.jsp
+		//phải làm như vậy chứ ko thể đưa src của ảnh trực tiếp lên css trong style id=nn-cart-fly (user/product/list.jsp
+
+
+});
 	
 	/*
 	 * Xoa khoi gio hang 
@@ -52,7 +65,7 @@ $(function(){
 			success:function(response){
 				$(".nn-cart #count").html(response[0]);
 				$(".nn-cart #amount").html(response[1]);
-				td_amt.html("$"+response[2]); // trả về amount nơi giỏ hàng đang xem
+				td_amt.html("$"+response[2]);// trả về amount nơi giỏ hàng đang xem
 			},
 			dataType:"json"
 		});

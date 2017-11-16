@@ -8,7 +8,7 @@
 <div class="nn-cart">
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<img class="col-sm-5" src="images/shoppingcart.gif" />
+			<img class="col-sm-5 nn-cart-img" src="images/shoppingcart.gif" />
 			<ul class="col-sm-7">
 				<li><span id="count">${cart.count}</span> <s:message code="g.cart.items"/></li>
 				<li>$ <span id="amount">${cart.amount}</span></li>

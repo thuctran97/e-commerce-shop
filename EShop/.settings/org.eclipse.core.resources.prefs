@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/js/shopping-cart.js=UTF-8
 encoding//src/eshop/admin/controller/AdminCategoryController.java=UTF-8
 encoding//src/eshop/admin/controller/AdminController.java=UTF-8
 encoding//src/eshop/admin/controller/AdminMasterRoleController.java=UTF-8
