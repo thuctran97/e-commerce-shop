@@ -1,2 +1,2 @@
-# WebProject_EShop
-Web bán hàng EShop
+# EShop
+E-commerce website
