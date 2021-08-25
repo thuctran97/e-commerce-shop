@@ -1,2 +1,2 @@
 # EShop
-E-commerce website
+Only e-commerce application
