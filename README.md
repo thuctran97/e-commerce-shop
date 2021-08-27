@@ -1,2 +1,2 @@
 # e-commerce-shop
-Only e-commerce application
+Online e-commerce website
